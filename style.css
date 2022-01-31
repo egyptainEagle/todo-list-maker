@@ -1,0 +1,206 @@
+/* ------ FONTS STYLESHEET ------*/
+@font-face {
+    font-family: NovaBold;
+    src: url("fonts/NOVABOLD.otf");
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("fonts/BebasNeue.ttf");
+}
+@font-face {
+    font-family: Outfit;
+    src: url("fonts/Outfit.ttf");
+}
+@font-face {
+    font-family: SpaceMono;
+    src: url("fonts/SpaceMono.ttf");
+    font-weight: 700;
+}
+/*------------------------------*/
+
+body{
+    margin: 0 auto;
+    width: 95%;
+}
+h1{
+    width: fit-content;
+    padding: 0.3em;
+    margin: 2em auto;
+    font-family: "Bebas Neue",serif;
+    letter-spacing: 0.2em;
+    word-spacing: 0.5em;
+}
+h2{
+    font-family: "Bebas Neue",serif;
+    letter-spacing: 0.2em;
+    word-spacing: 0.5em;
+    width: fit-content;
+    margin-bottom: 1.5em;
+    
+}
+h2::after{
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 0.4em auto;
+    height: 1.5px;
+    background-color: gray;
+
+}
+h2 img{
+    width: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    transition: all 0.13s ease-out;
+
+}
+h2:hover img{
+    visibility: visible;
+}
+h2 img:hover{
+    transform: scale(1.1);
+}
+h3{
+    font-family: Outfit,monospace;
+}
+p{
+    font-family: Outfit,monospace;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+section{
+    width: 100%;
+    max-width: 500px;
+}
+.task-list{
+    padding: 1em 0;
+    border-bottom: 1px solid gray;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.studying-section, .work-section, .general-section, .social-section{
+    font-family: Outfit,Courier;
+}
+
+.studying-section .task-list{
+    background: rgba(242, 133, 44,0.2);
+}
+.work-section .task-list{
+    background: rgba(123, 242, 44, 0.2);
+}
+.general-section .task-list{
+    background: rgba(44, 153, 242, 0.2);
+}
+.social-section .task-list{
+    background: rgba(242, 44, 232, 0.2);
+}
+.task-list__list-header div + div{
+ margin: 0 1em;
+}
+.task-list__list-header span{
+    font-family: SpaceMono, monospace;
+    display: flex;
+    column-gap: 5px;
+}
+.list-header__time ,.list-header__date{
+    display: inline-flex;
+    column-gap: 5px;
+    
+}
+.list-header__time img, .list-header__date img{
+    width: 20px;
+}
+.task-list__footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+} 
+
+.task-list__check-btn{
+    width: 25px;
+    cursor: pointer;
+}
+.task-list__delete-icon{
+    font-family: "Bebas Neue",serif;
+    letter-spacing: 0.1em;
+    padding: 0.2em 0.8em;
+    background: rgb(155, 5, 5);
+    color:white;
+    border-radius: 5px;
+    width: fit-content;
+    justify-self: end;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+}
+
+.task-list__delete-icon:hover{
+    background: rgb(202, 1, 1);
+
+}
+
+.add-item{
+    font-size: 16px;
+  box-sizing: border-box;
+  max-width: 400px;
+  background: rgba(255, 0, 0, 0.637);
+  padding: 1.3em;
+}
+.add-item *{
+    cursor: pointer;
+}
+.add-item__time{
+    display: inline-block;
+    margin-right: 2em;
+    background-color:transparent
+    
+}
+.add-item__title, .add-item__description{
+    display: block;
+    padding: 0 0.3em 0 0.3em;
+    margin: 1em 0;
+    letter-spacing: 0.1;
+    background:rgba(231, 3, 3, 0.287);
+    cursor: pointer;
+    min-height: 1em;
+}
+
+
+.add-item__title:focus, .add-item__description:focus{
+    border:none;
+    outline: none;
+}
+
+
+
+.add-item__title{
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.add-item__description{
+min-height: 50px;
+}
+.add-item__footer{
+    display: flex;
+justify-content: flex-end;
+    width: 100%;
+     column-gap: 10px;  
+}
+.add-item__footer *{
+    background: darkcyan;
+    display: block;
+    padding: 0.2em 0.7em;
+    font-family: "Bebas Neue", serif;
+    border-radius: 5px;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
